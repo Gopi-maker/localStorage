@@ -9,8 +9,17 @@ myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
   e.preventDefault();
-  
-   localStorage.setItem('name', nameInput.value);
-  localStorage.setItem('email', emailInput.value);
+
+   
+    let userDetails={
+      name: nameInput.value,
+      email: emailInput.value
+    }
+    let serialized=JSON.stringify(userDetails);
+    
+    localStorage.setItem('userDetails',serialized);
+
+   //localStorage.setItem('name', nameInput.value);
+  //localStorage.setItem('email', emailInput.value);
 
 }
