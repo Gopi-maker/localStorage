@@ -17,7 +17,7 @@ function onSubmit(e) {
     }
     let serialized=JSON.stringify(userDetails);
     
-    localStorage.setItem('userDetails',serialized);
+    localStorage.setItem(nameInput.value,serialized);
 
    //localStorage.setItem('name', nameInput.value);
   //localStorage.setItem('email', emailInput.value);
